@@ -15,8 +15,7 @@ namespace QuanLiThuVien
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new fLogin());
-            Console.WriteLine("S? tác gi?: " + DataManager.Instance.TacGiaRepository.GetAll().Count);
+            Application.Run(new fmain());
 
         }
     }

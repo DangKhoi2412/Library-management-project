@@ -37,14 +37,13 @@
             mnuMTS_TaoPhieuMuon = new ToolStripMenuItem();
             mnuMTS_TraSach = new ToolStripMenuItem();
             mnuBaoCao = new ToolStripMenuItem();
-            mnuBC_SachDangMuon = new ToolStripMenuItem();
-            mnuBC_SachQuaHan = new ToolStripMenuItem();
             mnuDuLieu = new ToolStripMenuItem();
             mnuTroGiup = new ToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
+            báoCáoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -102,30 +101,20 @@
             // 
             // mnuBaoCao
             // 
-            mnuBaoCao.DropDownItems.AddRange(new ToolStripItem[] { mnuBC_SachDangMuon, mnuBC_SachQuaHan });
+            mnuBaoCao.DropDownItems.AddRange(new ToolStripItem[] { báoCáoToolStripMenuItem });
             mnuBaoCao.Name = "mnuBaoCao";
             mnuBaoCao.Size = new Size(115, 36);
             mnuBaoCao.Text = "Báo cáo";
-            // 
-            // mnuBC_SachDangMuon
-            // 
-            mnuBC_SachDangMuon.Name = "mnuBC_SachDangMuon";
-            mnuBC_SachDangMuon.Size = new Size(301, 40);
-            mnuBC_SachDangMuon.Text = "Sách đang mượn";
-            mnuBC_SachDangMuon.Click += mnuBC_SachDangMuon_Click;
-            // 
-            // mnuBC_SachQuaHan
-            // 
-            mnuBC_SachQuaHan.Name = "mnuBC_SachQuaHan";
-            mnuBC_SachQuaHan.Size = new Size(301, 40);
-            mnuBC_SachQuaHan.Text = "Sách quá hạn";
-            mnuBC_SachQuaHan.Click += mnuBC_SachQuaHan_Click;
+            mnuBaoCao.Click += mnuBaoCao_Click;
             // 
             // mnuDuLieu
             // 
+            mnuDuLieu.Checked = true;
+            mnuDuLieu.CheckState = CheckState.Checked;
             mnuDuLieu.Name = "mnuDuLieu";
-            mnuDuLieu.Size = new Size(107, 36);
-            mnuDuLieu.Text = "Dữ liệu";
+            mnuDuLieu.Size = new Size(133, 36);
+            mnuDuLieu.Text = "Thống Kê";
+            mnuDuLieu.Click += mnuDuLieu_Click;
             // 
             // mnuTroGiup
             // 
@@ -169,6 +158,12 @@
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
             // 
+            // báoCáoToolStripMenuItem
+            // 
+            báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
+            báoCáoToolStripMenuItem.Size = new Size(270, 40);
+            báoCáoToolStripMenuItem.Text = "Báo cáo";
+            // 
             // fmain
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -206,11 +201,10 @@
         private ToolStripMenuItem mnuBaoCao;
         private ToolStripMenuItem mnuDuLieu;
         private ToolStripMenuItem mnuTroGiup;
-        private ToolStripMenuItem mnuBC_SachDangMuon;
-        private ToolStripMenuItem mnuBC_SachQuaHan;
         private ContextMenuStrip contextMenuStrip1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
+        private ToolStripMenuItem báoCáoToolStripMenuItem;
     }
 }

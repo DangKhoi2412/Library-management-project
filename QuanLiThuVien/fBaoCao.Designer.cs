@@ -57,13 +57,6 @@
             dtpTuNgay = new DateTimePicker();
             label10 = new Label();
             label9 = new Label();
-            tabSachQuaHan = new TabPage();
-            groupBox4 = new GroupBox();
-            dgvDSQuaHan = new DataGridView();
-            groupBox3 = new GroupBox();
-            btnLocDSQuaHan = new Button();
-            cmbMucDoQuaHan = new ComboBox();
-            label12 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             label8 = new Label();
             label7 = new Label();
@@ -82,17 +75,12 @@
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSachSachDangMuon).BeginInit();
             grpLocBaoCao.SuspendLayout();
-            tabSachQuaHan.SuspendLayout();
-            groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvDSQuaHan).BeginInit();
-            groupBox3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // tbcBaoCao
             // 
             tbcBaoCao.Controls.Add(tabSachDangMuon);
-            tbcBaoCao.Controls.Add(tabSachQuaHan);
             tbcBaoCao.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbcBaoCao.Location = new Point(3, 186);
             tbcBaoCao.Name = "tbcBaoCao";
@@ -116,7 +104,7 @@
             tabSachDangMuon.Padding = new Padding(3);
             tabSachDangMuon.Size = new Size(1709, 792);
             tabSachDangMuon.TabIndex = 0;
-            tabSachDangMuon.Text = "Sách đang mượn";
+            tabSachDangMuon.Text = "Báo cáo";
             tabSachDangMuon.UseVisualStyleBackColor = true;
             tabSachDangMuon.Click += tabSachDangMuon_Click;
             // 
@@ -128,7 +116,7 @@
             btnTaiLai.TabIndex = 14;
             btnTaiLai.Text = "Load";
             btnTaiLai.UseVisualStyleBackColor = true;
-            btnTaiLai.Click += btnTaiLai_Click_1;
+
             // 
             // btnChiTiet
             // 
@@ -386,75 +374,6 @@
             label9.TabIndex = 0;
             label9.Text = "Từ ngày:";
             // 
-            // tabSachQuaHan
-            // 
-            tabSachQuaHan.Controls.Add(groupBox4);
-            tabSachQuaHan.Controls.Add(groupBox3);
-            tabSachQuaHan.Location = new Point(4, 36);
-            tabSachQuaHan.Name = "tabSachQuaHan";
-            tabSachQuaHan.Padding = new Padding(3);
-            tabSachQuaHan.Size = new Size(1709, 792);
-            tabSachQuaHan.TabIndex = 1;
-            tabSachQuaHan.Text = "Sách quá hạn";
-            tabSachQuaHan.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            groupBox4.Controls.Add(dgvDSQuaHan);
-            groupBox4.Location = new Point(18, 232);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(1685, 463);
-            groupBox4.TabIndex = 2;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Danh sách";
-            // 
-            // dgvDSQuaHan
-            // 
-            dgvDSQuaHan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDSQuaHan.Location = new Point(11, 34);
-            dgvDSQuaHan.Name = "dgvDSQuaHan";
-            dgvDSQuaHan.RowHeadersWidth = 62;
-            dgvDSQuaHan.Size = new Size(1663, 423);
-            dgvDSQuaHan.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            groupBox3.Controls.Add(btnLocDSQuaHan);
-            groupBox3.Controls.Add(cmbMucDoQuaHan);
-            groupBox3.Controls.Add(label12);
-            groupBox3.Location = new Point(25, 46);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(1662, 180);
-            groupBox3.TabIndex = 0;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Báo cáo sách quá hạn";
-            // 
-            // btnLocDSQuaHan
-            // 
-            btnLocDSQuaHan.Location = new Point(1364, 77);
-            btnLocDSQuaHan.Name = "btnLocDSQuaHan";
-            btnLocDSQuaHan.Size = new Size(268, 73);
-            btnLocDSQuaHan.TabIndex = 2;
-            btnLocDSQuaHan.Text = "Lọc danh sách quá hạn";
-            btnLocDSQuaHan.UseVisualStyleBackColor = true;
-            // 
-            // cmbMucDoQuaHan
-            // 
-            cmbMucDoQuaHan.FormattingEnabled = true;
-            cmbMucDoQuaHan.Location = new Point(100, 101);
-            cmbMucDoQuaHan.Name = "cmbMucDoQuaHan";
-            cmbMucDoQuaHan.Size = new Size(1191, 35);
-            cmbMucDoQuaHan.TabIndex = 1;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(100, 58);
-            label12.Name = "label12";
-            label12.Size = new Size(195, 27);
-            label12.TabIndex = 0;
-            label12.Text = "Mức độ quá hạn:";
-            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 4;
@@ -591,11 +510,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvDanhSachSachDangMuon).EndInit();
             grpLocBaoCao.ResumeLayout(false);
             grpLocBaoCao.PerformLayout();
-            tabSachQuaHan.ResumeLayout(false);
-            groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvDSQuaHan).EndInit();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -604,7 +518,6 @@
 
         private TabControl tbcBaoCao;
         private TabPage tabSachDangMuon;
-        private TabPage tabSachQuaHan;
 
 
         public void ChonTabSachDangMuon()
@@ -614,7 +527,7 @@
 
         public void ChonTabSachQuaHan()
         {
-            tbcBaoCao.SelectedTab = tabSachQuaHan;
+            //tbcBaoCao.SelectedTab = tabSachQuaHan;
         }
 
         private TableLayoutPanel tableLayoutPanel1;
@@ -633,12 +546,6 @@
         private Label label9;
         private GroupBox groupBox2;
         private DataGridView dgvDanhSachSachDangMuon;
-        private GroupBox groupBox3;
-        private Label label12;
-        private GroupBox groupBox4;
-        private DataGridView dgvDSQuaHan;
-        private Button btnLocDSQuaHan;
-        private ComboBox cmbMucDoQuaHan;
         private GroupBox groupBox1;
         private CheckBox ckbTenSach;
         private ComboBox cmbTenSach;

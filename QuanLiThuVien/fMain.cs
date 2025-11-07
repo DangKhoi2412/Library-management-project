@@ -123,5 +123,17 @@ namespace QuanLiThuVien
         {
 
         }
+
+        private void mnuDuLieu_Click(object sender, EventArgs e)
+        {
+            fThongKe fThongKe = new fThongKe();
+            fThongKe.ShowDialog();
+        }
+
+        private void mnuBaoCao_Click(object sender, EventArgs e)
+        {
+            fBaoCao fBaoCao = new fBaoCao();
+            fBaoCao.ShowDialog();
+        }
     }
 }

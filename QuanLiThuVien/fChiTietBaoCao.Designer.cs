@@ -408,7 +408,8 @@
             Controls.Add(lblTenDG);
             Controls.Add(lblMaDG);
             Name = "fChiTietBaoCao";
-            Text = "fChiTietBaoCao";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Chi tiết";
             Load += fChiTietBaoCao_Load;
             ResumeLayout(false);
             PerformLayout();

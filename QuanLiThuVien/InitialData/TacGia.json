@@ -1,82 +1,102 @@
 [
   {
     "Id": "TG001",
-    "Name": "Nguyễn Văn A"
-  },
-  {
-    "Id": "TG002",
-    "Name": "Trần Thị B"
-  },
-  {
-    "Id": "TG003",
-    "Name": "Phạm Văn C"
-  },
-  {
-    "Id": "TG004",
-    "Name": "Lê Thị D"
-  },
-  {
-    "Id": "TG005",
-    "Name": "Hoàng Minh E"
-  },
-  {
-    "Id": "TG006",
-    "Name": "Paulo Coelho"
-  },
-  {
-    "Id": "TG007",
-    "Name": "Đỗ Xuân F"
-  },
-  {
-    "Id": "TG008",
-    "Name": "Gustave Le Bon"
-  },
-  {
-    "Id": "TG009",
     "Name": "Nguyễn Nhật Ánh"
   },
   {
-    "Id": "TG010",
-    "Name": "Vũ Thanh G"
+    "Id": "TG002",
+    "Name": "Trịnh Xuân Thuận"
   },
   {
-    "Id": "TG011",
-    "Name": "Philip Kotler"
-  },
-  {
-    "Id": "TG012",
-    "Name": "Tô Hoài"
-  },
-  {
-    "Id": "TG013",
-    "Name": "Daniel Kahneman"
-  },
-  {
-    "Id": "TG014",
-    "Name": "Dale Carnegie"
-  },
-  {
-    "Id": "TG015",
-    "Name": "Bùi Anh H"
-  },
-  {
-    "Id": "TG016",
+    "Id": "TG003",
     "Name": "Yuval Noah Harari"
   },
   {
-    "Id": "TG017",
-    "Name": "Lê Ngọc K"
+    "Id": "TG004",
+    "Name": "Robert C. Martin (Uncle Bob)"
   },
   {
-    "Id": "TG018",
+    "Id": "TG005",
+    "Name": "Dale Carnegie"
+  },
+  {
+    "Id": "TG006",
+    "Name": "J.K. Rowling"
+  },
+  {
+    "Id": "TG007",
+    "Name": "Tô Hoài"
+  },
+  {
+    "Id": "TG008",
+    "Name": "Hồ Quý Ly"
+  },
+  {
+    "Id": "TG009",
+    "Name": "Karl Marx"
+  },
+  {
+    "Id": "TG010",
+    "Name": "Adam Smith"
+  },
+  {
+    "Id": "TG011",
+    "Name": "Haruki Murakami"
+  },
+  {
+    "Id": "TG012",
+    "Name": "Ngô Bảo Châu"
+  },
+  {
+    "Id": "TG013",
+    "Name": "Stephen Hawking"
+  },
+  {
+    "Id": "TG014",
+    "Name": "Nguyễn Du"
+  },
+  {
+    "Id": "TG015",
+    "Name": "Trần Quốc Tuấn"
+  },
+  {
+    "Id": "TG016",
+    "Name": "Nguyễn Hiến Lê"
+  },
+  {
+    "Id": "TG017",
     "Name": "Vũ Trọng Phụng"
   },
   {
+    "Id": "TG018",
+    "Name": "Nam Cao"
+  },
+  {
     "Id": "TG019",
-    "Name": "Minh Niệm"
+    "Name": "Ecripides"
   },
   {
     "Id": "TG020",
-    "Name": "Mario Puzo"
+    "Name": "William Shakespeare"
+  },
+  {
+    "Id": "TG021",
+    "Name": "J.R.R. Tolkien"
+  },
+  {
+    "Id": "TG022",
+    "Name": "Thomas H. Cormen"
+  },
+  {
+    "Id": "TG023",
+    "Name": "Andrew S. Tanenbaum"
+  },
+  {
+    "Id": "TG024",
+    "Name": "Erich Gamma"
+  },
+  {
+    "Id": "TG025",
+    "Name": "Khuyết danh"
   }
 ]

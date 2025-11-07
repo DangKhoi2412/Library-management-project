@@ -26,127 +26,127 @@
     "NgaySinh": "2003-03-22T00:00:00",
     "GioiTinh": 0,
     "Email": "dung.pham@example.com",
-    "SoDienThoai": "0923456789",
-    "DiaChi": "89 Trần Hưng Đạo, Q.5, TP.HCM"
+    "SoDienThoai": "0987654321",
+    "DiaChi": "78 Võ Thị Sáu, Q.3, TP.HCM"
   },
   {
     "MaDocGia": "DG004",
-    "LoaiDocGia": 1,
-    "Ten": "Trần Ngọc Mai",
-    "NgaySinh": "1985-07-19T00:00:00",
+    "LoaiDocGia": 2,
+    "Ten": "Trần Thanh Thảo",
+    "NgaySinh": "1998-07-19T00:00:00",
     "GioiTinh": 1,
-    "Email": "mai.tran@example.com",
+    "Email": "thao.tran@example.com",
     "SoDienThoai": "0934567890",
-    "DiaChi": "21 Võ Văn Tần, Q.3, TP.HCM"
+    "DiaChi": "21 Lê Duẩn, Q.Bình Thạnh, TP.HCM"
   },
   {
     "MaDocGia": "DG005",
     "LoaiDocGia": 0,
-    "Ten": "Hoàng Văn Nam",
-    "NgaySinh": "2006-01-30T00:00:00",
+    "Ten": "Võ Văn Tùng",
+    "NgaySinh": "2004-01-30T00:00:00",
     "GioiTinh": 0,
-    "Email": "nam.hoang@example.com",
-    "SoDienThoai": "0945678901",
-    "DiaChi": "102 Hai Bà Trưng, Q.1, TP.HCM"
+    "Email": "tung.vo@example.com",
+    "SoDienThoai": "0945678123",
+    "DiaChi": "33 Nguyễn Huệ, Q.1, TP.HCM"
   },
   {
     "MaDocGia": "DG006",
-    "LoaiDocGia": 0,
-    "Ten": "Vũ Thị Thu Hà",
-    "NgaySinh": "2004-09-15T00:00:00",
+    "LoaiDocGia": 1,
+    "Ten": "Hoàng Thị Kim Oanh",
+    "NgaySinh": "1985-09-15T00:00:00",
     "GioiTinh": 1,
-    "Email": "ha.vu@example.com",
-    "SoDienThoai": "0956789012",
-    "DiaChi": "33 Lê Lợi, Q.Gò Vấp, TP.HCM"
+    "Email": "oanh.hoang@example.com",
+    "SoDienThoai": "0909876543",
+    "DiaChi": "56 Hùng Vương, Q.5, TP.HCM"
   },
   {
     "MaDocGia": "DG007",
-    "LoaiDocGia": 1,
-    "Ten": "Đặng Quốc Bảo",
-    "NgaySinh": "1992-02-14T00:00:00",
-    "GioiTinh": 0,
-    "Email": "bao.dang@example.com",
-    "SoDienThoai": "0967890123",
-    "DiaChi": "78 An Dương Vương, Q.5, TP.HCM"
+    "LoaiDocGia": 0,
+    "Ten": "Đặng Bảo Châu",
+    "NgaySinh": "2006-02-14T00:00:00",
+    "GioiTinh": 1,
+    "Email": "chau.dang@example.com",
+    "SoDienThoai": "0978123456",
+    "DiaChi": "89 An Dương Vương, Q.8, TP.HCM"
   },
   {
     "MaDocGia": "DG008",
     "LoaiDocGia": 0,
-    "Ten": "Ngô Gia Huy",
-    "NgaySinh": "2005-08-08T00:00:00",
+    "Ten": "Ngô Gia Bảo",
+    "NgaySinh": "2005-08-25T00:00:00",
     "GioiTinh": 0,
-    "Email": "huy.ngo@example.com",
-    "SoDienThoai": "0978901234",
-    "DiaChi": "56 Nguyễn Đình Chiểu, Q.3, TP.HCM"
+    "Email": "bao.ngo@example.com",
+    "SoDienThoai": "0918765432",
+    "DiaChi": "101 Trần Hưng Đạo, Q.Tân Bình, TP.HCM"
   },
   {
     "MaDocGia": "DG009",
-    "LoaiDocGia": 1,
-    "Ten": "Bùi Thảo Vy",
-    "NgaySinh": "1998-12-25T00:00:00",
-    "GioiTinh": 1,
-    "Email": "vy.bui@example.com",
-    "SoDienThoai": "0989012345",
-    "DiaChi": "41 Sư Vạn Hạnh, Q.10, TP.HCM"
+    "LoaiDocGia": 2,
+    "Ten": "Huỳnh Tấn Phát",
+    "NgaySinh": "1995-12-01T00:00:00",
+    "GioiTinh": 0,
+    "Email": "phat.huynh@example.com",
+    "SoDienThoai": "0965432109",
+    "DiaChi": "22 Hai Bà Trưng, Q.1, TP.HCM"
   },
   {
     "MaDocGia": "DG010",
     "LoaiDocGia": 0,
-    "Ten": "Đinh Công Thành",
-    "NgaySinh": "2002-06-01T00:00:00",
-    "GioiTinh": 0,
-    "Email": "thanh.dinh@example.com",
-    "SoDienThoai": "0990123456",
-    "DiaChi": "99 Pasteur, Q.1, TP.HCM"
+    "Ten": "Trần Ngọc Bích",
+    "NgaySinh": "2004-06-10T00:00:00",
+    "GioiTinh": 1,
+    "Email": "bich.tran@example.com",
+    "SoDienThoai": "0908765123",
+    "DiaChi": "44 Sư Vạn Hạnh, Q.10, TP.HCM"
   },
   {
     "MaDocGia": "DG011",
     "LoaiDocGia": 1,
-    "Ten": "Lý Thanh Thảo",
-    "NgaySinh": "1995-04-18T00:00:00",
-    "GioiTinh": 1,
-    "Email": "thao.ly@example.com",
-    "SoDienThoai": "0881234567",
-    "DiaChi": "123 Điện Biên Phủ, Q.Bình Thạnh, TP.HCM"
+    "Ten": "Lý Thành Long",
+    "NgaySinh": "1979-04-05T00:00:00",
+    "GioiTinh": 0,
+    "Email": "long.ly@example.com",
+    "SoDienThoai": "0898123456",
+    "DiaChi": "77 Cách Mạng Tháng 8, Q.3, TP.HCM"
   },
   {
     "MaDocGia": "DG012",
     "LoaiDocGia": 0,
-    "Ten": "Dương Minh Nhật",
-    "NgaySinh": "2007-10-10T00:00:00",
-    "GioiTinh": 0,
-    "Email": "nhat.duong@example.com",
-    "SoDienThoai": "0871234567",
-    "DiaChi": "234 Cách Mạng Tháng Tám, Q.Tân Bình, TP.HCM"
+    "Ten": "Mai Phương Thúy",
+    "NgaySinh": "2007-01-01T00:00:00",
+    "GioiTinh": 1,
+    "Email": "thuy.mai@example.com",
+    "SoDienThoai": "0888654321",
+    "DiaChi": "90 Nguyễn Văn Cừ, Q.5, TP.HCM"
   },
   {
     "MaDocGia": "DG013",
-    "LoaiDocGia": 1,
-    "Ten": "Mai Anh Tuấn",
-    "NgaySinh": "1988-01-05T00:00:00",
+    "LoaiDocGia": 2,
+    "Ten": "Dương Hoài Nam",
+    "NgaySinh": "2000-10-10T00:00:00",
     "GioiTinh": 0,
-    "Email": "tuan.mai@example.com",
-    "SoDienThoai": "0861234567",
-    "DiaChi": "345 Lê Văn Sỹ, Q.Phú Nhuận, TP.HCM"
+    "Email": "nam.duong@example.com",
+    "SoDienThoai": "0876123456",
+    "DiaChi": "123 Điện Biên Phủ, Q.Bình Thạnh, TP.HCM"
   },
   {
     "MaDocGia": "DG014",
     "LoaiDocGia": 0,
-    "Ten": "Tô Ngọc Hân",
-    "NgaySinh": "2004-07-07T00:00:00",
+    "Ten": "Vũ Thu Trang",
+    "NgaySinh": "2005-07-28T00:00:00",
     "GioiTinh": 1,
-    "Email": "han.to@example.com",
-    "SoDienThoai": "0851234567",
-    "DiaChi": "456 Hoàng Văn Thụ, Q.Tân Bình, TP.HCM"
+    "Email": "trang.vu@example.com",
+    "SoDienThoai": "0861234567",
+    "DiaChi": "321 Pasteur, Q.3, TP.HCM"
   },
   {
     "MaDocGia": "DG015",
     "LoaiDocGia": 1,
-    "Ten": "Phan Thanh Phong",
-    "NgaySinh": "1993-11-11T00:00:00",
+    "Ten": "Phan Hoàng Phong",
+    "NgaySinh": "1988-03-17T00:00:00",
     "GioiTinh": 0,
     "Email": "phong.phan@example.com",
-    "SoDienThoai": "0841234567",
+    "SoDienThoai": "0851234567",
     "DiaChi": "567 Xô Viết Nghệ Tĩnh, Q.Bình Thạnh, TP.HCM"
   },
   {
@@ -156,7 +156,7 @@
     "NgaySinh": "2006-03-03T00:00:00",
     "GioiTinh": 1,
     "Email": "anh.do@example.com",
-    "SoDienThoai": "0831234567",
+    "SoDienThoai": "0841234567",
     "DiaChi": "678 Trường Chinh, Q.12, TP.HCM"
   },
   {
@@ -166,37 +166,87 @@
     "NgaySinh": "1991-08-20T00:00:00",
     "GioiTinh": 0,
     "Email": "trung.nguyen@example.com",
-    "SoDienThoai": "0821234567",
+    "SoDienThoai": "0831234567",
     "DiaChi": "789 Quang Trung, Q.Gò Vấp, TP.HCM"
   },
   {
     "MaDocGia": "DG018",
     "LoaiDocGia": 0,
-    "Ten": "Lê Hà My",
-    "NgaySinh": "2005-12-01T00:00:00",
+    "Ten": "Bùi Thị Hà",
+    "NgaySinh": "2004-12-12T00:00:00",
     "GioiTinh": 1,
-    "Email": "my.le@example.com",
-    "SoDienThoai": "0811234567",
-    "DiaChi": "890 Nguyễn Kiệm, Q.Phú Nhuận, TP.HCM"
+    "Email": "ha.bui@example.com",
+    "SoDienThoai": "0821234567",
+    "DiaChi": "890 Âu Cơ, Q.Tân Phú, TP.HCM"
   },
   {
     "MaDocGia": "DG019",
-    "LoaiDocGia": 1,
-    "Ten": "Trịnh Hoàng Khang",
-    "NgaySinh": "1996-05-28T00:00:00",
+    "LoaiDocGia": 2,
+    "Ten": "Lê Văn Đức",
+    "NgaySinh": "1975-02-02T00:00:00",
     "GioiTinh": 0,
-    "Email": "khang.trinh@example.com",
-    "SoDienThoai": "0801234567",
-    "DiaChi": "901 Âu Cơ, Q.Tân Phú, TP.HCM"
+    "Email": "duc.le@example.com",
+    "SoDienThoai": "0811234567",
+    "DiaChi": "901 Lũy Bán Bích, Q.Tân Phú, TP.HCM"
   },
   {
     "MaDocGia": "DG020",
     "LoaiDocGia": 0,
-    "Ten": "Hồ Bảo Trân",
-    "NgaySinh": "2003-02-18T00:00:00",
+    "Ten": "Tạ Minh Châu",
+    "NgaySinh": "2005-10-30T00:00:00",
     "GioiTinh": 1,
-    "Email": "tran.ho@example.com",
-    "SoDienThoai": "0791234567",
-    "DiaChi": "111 Thành Thái, Q.10, TP.HCM"
+    "Email": "chau.ta@example.com",
+    "SoDienThoai": "0902345678",
+    "DiaChi": "111 Cộng Hòa, Q.Tân Bình, TP.HCM"
+  },
+  {
+    "MaDocGia": "DG021",
+    "LoaiDocGia": 1,
+    "Ten": "GS. Trương Nguyện",
+    "NgaySinh": "1970-01-01T00:00:00",
+    "GioiTinh": 0,
+    "Email": "nguyen.truong@example.com",
+    "SoDienThoai": "0903333333",
+    "DiaChi": "1 Đại học Bách Khoa, Q.10, TP.HCM"
+  },
+  {
+    "MaDocGia": "DG022",
+    "LoaiDocGia": 0,
+    "Ten": "Phan Thị Mỹ Lệ",
+    "NgaySinh": "2003-04-18T00:00:00",
+    "GioiTinh": 1,
+    "Email": "le.phan@example.com",
+    "SoDienThoai": "0904444444",
+    "DiaChi": "222 Lý Thái Tổ, Q.3, TP.HCM"
+  },
+  {
+    "MaDocGia": "DG023",
+    "LoaiDocGia": 0,
+    "Ten": "Đinh Công Hoàng",
+    "NgaySinh": "2004-09-09T00:00:00",
+    "GioiTinh": 0,
+    "Email": "hoang.dinh@example.com",
+    "SoDienThoai": "0905555555",
+    "DiaChi": "333 Lê Lợi, Q.1, TP.HCM"
+  },
+  {
+    "MaDocGia": "DG024",
+    "LoaiDocGia": 1,
+    "Ten": "PGS.TS. Trần Thị Mai",
+    "NgaySinh": "1982-11-21T00:00:00",
+    "GioiTinh": 1,
+    "Email": "mai.tran@example.com",
+    "SoDienThoai": "0906666666",
+    "DiaChi": "444 Phạm Ngũ Lão, Q.Gò Vấp, TP.HCM"
+  },
+  {
+    "MaDocGia": "DG025",
+    "LoaiDocGia": 2,
+    "Ten": "Ông Cao Thắng",
+    "NgaySinh": "1990-12-30T00:00:00",
+    "GioiTinh": 0,
+    "Email": "thang.ong@example.com",
+    "SoDienThoai": "0907777777",
+    "DiaChi": "555 Nguyễn Oanh, Q.Gò Vấp, TP.HCM"
   }
 ]

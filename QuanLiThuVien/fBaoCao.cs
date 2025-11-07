@@ -49,12 +49,67 @@ namespace QuanLiThuVien
             dgvDanhSachSachDangMuon.DataSource = _bindingBaoCao;
         }
 
+        // === VIẾT LẠI HOOKEVENTS KHÔNG DÙNG LAMBDA ===
         private void HookEvents()
         {
             Load += fBaoCao_Load;
             btnLoc.Click += btnLoc_Click;
             btnTaiLai.Click += btnTaiLai_Click;
+
+            // Nối các sự kiện checkbox với các hàm xử lý bên dưới
+            ckbTheoNgay.CheckedChanged += ckbTheoNgay_CheckedChanged;
+            ckbTenSach.CheckedChanged += ckbTenSach_CheckedChanged;
+            ckbLoaiDG.CheckedChanged += ckbLoaiDG_CheckedChanged;
+            ckbLoaiSach.CheckedChanged += ckbLoaiSach_CheckedChanged;
+            ckbMucDoQuaHan.CheckedChanged += ckbMucDoQuaHan_CheckedChanged;
         }
+
+        #region Các hàm xử lý sự kiện CheckBox (Thay thế cho Lambda)
+
+        // Đây là hàm (đã bỏ comment) mà các hàm dưới đây sẽ gọi
+        private void HandleCheckBoxToggle(CheckBox ckb, GroupBox grp, bool toggleComboBox = true)
+        {
+            foreach (Control c in grp.Controls)
+            {
+                if (c is ComboBox && toggleComboBox)
+                {
+                    c.Enabled = ckb.Checked;
+                    if (!ckb.Checked) ((ComboBox)c).SelectedIndex = -1;
+                }
+                if (c is DateTimePicker)
+                {
+                    c.Enabled = ckb.Checked;
+                }
+            }
+        }
+
+        private void ckbTheoNgay_CheckedChanged(object sender, EventArgs e)
+        {
+            HandleCheckBoxToggle(ckbTheoNgay, grpLocBaoCao, false);
+        }
+
+        private void ckbTenSach_CheckedChanged(object sender, EventArgs e)
+        {
+            HandleCheckBoxToggle(ckbTenSach, groupBox1);
+        }
+
+        private void ckbLoaiDG_CheckedChanged(object sender, EventArgs e)
+        {
+            HandleCheckBoxToggle(ckbLoaiDG, grbTheoLoaiDocGia);
+        }
+
+        private void ckbLoaiSach_CheckedChanged(object sender, EventArgs e)
+        {
+            HandleCheckBoxToggle(ckbLoaiSach, grbTheoLoaiSach);
+        }
+
+        private void ckbMucDoQuaHan_CheckedChanged(object sender, EventArgs e)
+        {
+            HandleCheckBoxToggle(ckbMucDoQuaHan, grbTheoMucQuaHan);
+        }
+        #endregion
+
+        // === CÁC HÀM CÀI ĐẶT GIAO DIỆN (Giữ nguyên) ===
 
         private void SetupDataGridViews()
         {
@@ -104,29 +159,28 @@ namespace QuanLiThuVien
 
         private void ClearFilters()
         {
-            // Tab 1
             ckbTheoNgay.Checked = false;
             ckbTenSach.Checked = false;
             ckbLoaiDG.Checked = false;
             ckbLoaiSach.Checked = false;
             ckbMucDoQuaHan.Checked = false;
+
+            // Đồng thời tắt các ComboBox (vì HandleCheckBoxToggle không được gọi)
+            cmbTenSach.Enabled = false;
+            cmbLoaiDocGia.Enabled = false;
+            cmbLoaiSach.Enabled = false;
+            cmbMucQuaHan.Enabled = false;
+            dtpTuNgay.Enabled = false;
+            dtpDenNgay.Enabled = false;
+
+            // Xóa lựa chọn
+            cmbTenSach.SelectedIndex = -1;
+            cmbLoaiDocGia.SelectedIndex = -1;
+            cmbLoaiSach.SelectedIndex = -1;
+            cmbMucQuaHan.SelectedIndex = -1;
         }
 
-        //private void HandleCheckBoxToggle(CheckBox ckb, GroupBox grp, bool toggleComboBox = true)
-        //{
-        //    foreach (Control c in grp.Controls)
-        //    {
-        //        if (c is ComboBox && toggleComboBox)
-        //        {
-        //            c.Enabled = ckb.Checked;
-        //            if (!ckb.Checked) ((ComboBox)c).SelectedIndex = -1;
-        //        }
-        //        if (c is DateTimePicker)
-        //        {
-        //            c.Enabled = ckb.Checked;
-        //        }
-        //    }
-        //}
+        // === CÁC HÀM TẢI DỮ LIỆU (Giữ nguyên) ===
 
         private void fBaoCao_Load(object sender, EventArgs e)
         {
@@ -142,10 +196,10 @@ namespace QuanLiThuVien
         {
             try
             {
-                LoadFullData();      
-                ClearFilters();      
-                ApplyFilters();      
-                UpdateStatistics();  
+                LoadFullData();
+                ClearFilters();
+                ApplyFilters();
+                UpdateStatistics();
             }
             catch (Exception ex)
             {
@@ -165,22 +219,52 @@ namespace QuanLiThuVien
             }
         }
 
+        // === VIẾT LẠI UPDATESTATISTICS KHÔNG DÙNG LINQ/LAMBDA ===
         private void UpdateStatistics()
         {
             try
             {
-                lblThongKe_TongSoSach.Text = DataManager.Instance.BookRepository.GetAll().Sum(b => b.SoLuongNhap).ToString();
+                // 1. Tính Tổng số sách
+                int tongSoSach = 0;
+                List<Book> allBooks = DataManager.Instance.BookRepository.GetAll();
+                foreach (Book b in allBooks)
+                {
+                    tongSoSach += b.SoLuongNhap;
+                }
+                lblThongKe_TongSoSach.Text = tongSoSach.ToString();
+
+                // 2. Lấy Tổng số độc giả (List.Count là thuộc tính, không phải LINQ)
                 lblThongKe_SoDocGia.Text = DataManager.Instance.ReaderRepository.GetAll().Count.ToString();
 
-                var dangMuonTickets = _allTickets.Where(t => t.TrangThai == BorrowingStatus.DangMuon).ToList();
+                // 3. Lọc danh sách đang mượn
+                List<BaoCaoViewModel> dangMuonTickets = new List<BaoCaoViewModel>();
+                foreach (BaoCaoViewModel t in _allTickets)
+                {
+                    if (t.TrangThai == BorrowingStatus.DangMuon)
+                    {
+                        dangMuonTickets.Add(t);
+                    }
+                }
                 lblThongKe_SachDangMuon.Text = dangMuonTickets.Count.ToString();
-                lblThongKe_SachQuaHan.Text = dangMuonTickets.Count(t => t.SoNgayQuaHan > 0).ToString();
+
+                // 4. Đếm số sách quá hạn từ danh sách vừa lọc
+                int soSachQuaHan = 0;
+                foreach (BaoCaoViewModel t in dangMuonTickets)
+                {
+                    if (t.SoNgayQuaHan > 0)
+                    {
+                        soSachQuaHan++;
+                    }
+                }
+                lblThongKe_SachQuaHan.Text = soSachQuaHan.ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi cập nhật thống kê: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        // === CÁC HÀM LỌC (VIẾT LẠI KHÔNG DÙNG LINQ/LAMBDA) ===
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
@@ -189,39 +273,95 @@ namespace QuanLiThuVien
 
         private void ApplyFilters()
         {
-            IEnumerable<BaoCaoViewModel> filteredList = _allTickets;
+            // Danh sách mới để chứa kết quả lọc
+            List<BaoCaoViewModel> filteredList = new List<BaoCaoViewModel>();
 
-            if (ckbTheoNgay.Checked)
+            // Lấy các giá trị lọc ra ngoài vòng lặp 1 lần
+            bool locTheoNgay = ckbTheoNgay.Checked;
+            DateTime tuNgay = dtpTuNgay.Value.Date;
+            DateTime denNgay = dtpDenNgay.Value.Date;
+
+            bool locTheoTenSach = ckbTenSach.Checked && cmbTenSach.SelectedValue != null;
+            string maSach = "";
+            if (locTheoTenSach)
             {
-                DateTime tuNgay = dtpTuNgay.Value.Date;
-                DateTime denNgay = dtpDenNgay.Value.Date;
-                filteredList = filteredList.Where(t => t.NgayMuon.Date >= tuNgay && t.NgayMuon.Date <= denNgay);
+                maSach = cmbTenSach.SelectedValue.ToString();
             }
 
-            if (ckbTenSach.Checked && cmbTenSach.SelectedValue != null)
+            bool locTheoLoaiDG = ckbLoaiDG.Checked && cmbLoaiDocGia.SelectedValue != null;
+            TypeOfReader loaiDG = TypeOfReader.Khac; // Giá trị default
+            if (locTheoLoaiDG)
             {
-                string maSach = cmbTenSach.SelectedValue.ToString();
-                filteredList = filteredList.Where(t => t.MaSach == maSach);
+                loaiDG = (TypeOfReader)cmbLoaiDocGia.SelectedValue;
             }
 
-            if (ckbLoaiDG.Checked && cmbLoaiDocGia.SelectedValue != null)
+            bool locTheoLoaiSach = ckbLoaiSach.Checked && cmbLoaiSach.SelectedValue != null;
+            BookCategory loaiSach = BookCategory.Khac; // Giá trị default
+            if (locTheoLoaiSach)
             {
-                TypeOfReader loaiDG = (TypeOfReader)cmbLoaiDocGia.SelectedValue;
-                filteredList = filteredList.Where(t => t.LoaiDocGia == loaiDG);
+                loaiSach = (BookCategory)cmbLoaiSach.SelectedValue;
             }
 
-            if (ckbLoaiSach.Checked && cmbLoaiSach.SelectedValue != null)
+            bool locTheoMucQuaHan = ckbMucDoQuaHan.Checked && cmbMucQuaHan.SelectedValue != null;
+            int level = 0; // Giá trị default
+            if (locTheoMucQuaHan)
             {
-                BookCategory loaiSach = (BookCategory)cmbLoaiSach.SelectedValue;
-                filteredList = filteredList.Where(t => t.TheLoaiSach == loaiSach);
+                level = (int)cmbMucQuaHan.SelectedValue;
             }
 
-            if (ckbMucDoQuaHan.Checked && cmbMucQuaHan.SelectedValue != null)
+            // Bắt đầu 1 vòng lặp duy nhất
+            foreach (BaoCaoViewModel ticket in _allTickets)
             {
-                int level = (int)cmbMucQuaHan.SelectedValue;
-                filteredList = filteredList.Where(t => FilterByOverdueLevel(t, level));
+                // 1. Lọc theo ngày
+                if (locTheoNgay)
+                {
+                    if (ticket.NgayMuon.Date < tuNgay || ticket.NgayMuon.Date > denNgay)
+                    {
+                        continue; // Bỏ qua ticket này, đi đến ticket tiếp theo
+                    }
+                }
+
+                // 2. Lọc theo tên sách
+                if (locTheoTenSach)
+                {
+                    if (ticket.MaSach != maSach)
+                    {
+                        continue; // Bỏ qua
+                    }
+                }
+
+                // 3. Lọc theo loại độc giả
+                if (locTheoLoaiDG)
+                {
+                    if (ticket.LoaiDocGia != loaiDG)
+                    {
+                        continue; // Bỏ qua
+                    }
+                }
+
+                // 4. Lọc theo thể loại sách
+                if (locTheoLoaiSach)
+                {
+                    if (ticket.TheLoaiSach != loaiSach)
+                    {
+                        continue; // Bỏ qua
+                    }
+                }
+
+                // 5. Lọc theo mức độ quá hạn
+                if (locTheoMucQuaHan)
+                {
+                    if (!FilterByOverdueLevel(ticket, level)) // Dùng hàm helper
+                    {
+                        continue; // Bỏ qua
+                    }
+                }
+
+                // Nếu ticket "sống sót" qua tất cả các bộ lọc, thêm nó vào kết quả
+                filteredList.Add(ticket);
             }
 
+            // Cập nhật BindingList
             _bindingBaoCao.Clear();
             foreach (var ticket in filteredList)
             {
@@ -229,6 +369,7 @@ namespace QuanLiThuVien
             }
         }
 
+        // Hàm này không dùng LINQ/Lambda nên giữ nguyên
         private bool FilterByOverdueLevel(BaoCaoViewModel ticket, int level)
         {
             int daysOverdue = ticket.SoNgayQuaHan;
@@ -244,40 +385,13 @@ namespace QuanLiThuVien
                     return false;
             }
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvDanhSachSachDangMuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void tabSachDangMuon_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTaiLai_Click_1(object sender, EventArgs e)
-        {
-            
-        }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void label7_Click(object sender, EventArgs e) { }
+        private void dgvDanhSachSachDangMuon_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+        private void tabSachDangMuon_Click(object sender, EventArgs e) { }
+        private void textBox4_TextChanged(object sender, EventArgs e) { }
+        private void groupBox1_Enter(object sender, EventArgs e) { }
 
         private void btnChiTiet_Click(object sender, EventArgs e)
         {

@@ -302,7 +302,7 @@ namespace QuanLiThuVien
 
                 _ticketService.CreateBorrowingTicket(
                     txtMaPhieu.Text.Trim(),
-                    cbbMaDG.SelectedItem.ToString(),
+                    cbbMaDG.SelectedValue.ToString(),
                     cbbMaSach.SelectedValue?.ToString(),
                     soLuong,
                     dtpNgayMuon.Value,
@@ -311,7 +311,7 @@ namespace QuanLiThuVien
                 );
 
                 MessageBox.Show("Tạo phiếu mượn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                DataManager.Instance.SaveAllChanges();
                 LoadAllDgv();
                 SetMode(FormMode.Viewing);
             }
@@ -418,6 +418,7 @@ namespace QuanLiThuVien
                         message += $"\nTiền phạt quá hạn: {fine:N0} VNĐ";
                     }
                     MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DataManager.Instance.SaveAllChanges();
                     LoadAllDgv();
                 }
                 catch (Exception ex)
