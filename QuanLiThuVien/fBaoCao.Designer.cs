@@ -30,6 +30,17 @@
         {
             tbcBaoCao = new TabControl();
             tabSachDangMuon = new TabPage();
+            btnTaiLai = new Button();
+            btnChiTiet = new Button();
+            btnLoc = new Button();
+            grbTheoMucQuaHan = new GroupBox();
+            ckbMucDoQuaHan = new CheckBox();
+            cmbMucQuaHan = new ComboBox();
+            textBox3 = new TextBox();
+            grbTheoLoaiSach = new GroupBox();
+            ckbLoaiSach = new CheckBox();
+            cmbLoaiSach = new ComboBox();
+            textBox2 = new TextBox();
             grbTheoLoaiDocGia = new GroupBox();
             ckbLoaiDG = new CheckBox();
             cmbLoaiDocGia = new ComboBox();
@@ -41,6 +52,7 @@
             groupBox2 = new GroupBox();
             dgvDanhSachSachDangMuon = new DataGridView();
             grpLocBaoCao = new GroupBox();
+            ckbTheoNgay = new CheckBox();
             dtpDenNgay = new DateTimePicker();
             dtpTuNgay = new DateTimePicker();
             label10 = new Label();
@@ -61,19 +73,10 @@
             lblThongKe_SoDocGia = new Label();
             lblThongKe_SachDangMuon = new Label();
             lblThongKe_SachQuaHan = new Label();
-            grbTheoLoaiSach = new GroupBox();
-            ckbLoaiSach = new CheckBox();
-            cmbLoaiSach = new ComboBox();
-            textBox2 = new TextBox();
-            grbTheoMucQuaHan = new GroupBox();
-            ckbMucDoQuaHan = new CheckBox();
-            cmbMucQuaHan = new ComboBox();
-            textBox3 = new TextBox();
-            btnChiTiet = new Button();
-            btnLoc = new Button();
-            ckbTheoNgay = new CheckBox();
             tbcBaoCao.SuspendLayout();
             tabSachDangMuon.SuspendLayout();
+            grbTheoMucQuaHan.SuspendLayout();
+            grbTheoLoaiSach.SuspendLayout();
             grbTheoLoaiDocGia.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -84,8 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)dgvDSQuaHan).BeginInit();
             groupBox3.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            grbTheoLoaiSach.SuspendLayout();
-            grbTheoMucQuaHan.SuspendLayout();
             SuspendLayout();
             // 
             // tbcBaoCao
@@ -101,6 +102,7 @@
             // 
             // tabSachDangMuon
             // 
+            tabSachDangMuon.Controls.Add(btnTaiLai);
             tabSachDangMuon.Controls.Add(btnChiTiet);
             tabSachDangMuon.Controls.Add(btnLoc);
             tabSachDangMuon.Controls.Add(grbTheoMucQuaHan);
@@ -117,6 +119,113 @@
             tabSachDangMuon.Text = "Sách đang mượn";
             tabSachDangMuon.UseVisualStyleBackColor = true;
             tabSachDangMuon.Click += tabSachDangMuon_Click;
+            // 
+            // btnTaiLai
+            // 
+            btnTaiLai.Location = new Point(1550, 163);
+            btnTaiLai.Name = "btnTaiLai";
+            btnTaiLai.Size = new Size(148, 65);
+            btnTaiLai.TabIndex = 14;
+            btnTaiLai.Text = "Load";
+            btnTaiLai.UseVisualStyleBackColor = true;
+            btnTaiLai.Click += btnTaiLai_Click_1;
+            // 
+            // btnChiTiet
+            // 
+            btnChiTiet.Location = new Point(1550, 92);
+            btnChiTiet.Name = "btnChiTiet";
+            btnChiTiet.Size = new Size(148, 65);
+            btnChiTiet.TabIndex = 13;
+            btnChiTiet.Text = "Chi tiết";
+            btnChiTiet.UseVisualStyleBackColor = true;
+            btnChiTiet.Click += btnChiTiet_Click;
+            // 
+            // btnLoc
+            // 
+            btnLoc.Location = new Point(1550, 21);
+            btnLoc.Name = "btnLoc";
+            btnLoc.Size = new Size(148, 65);
+            btnLoc.TabIndex = 12;
+            btnLoc.Text = "Lọc";
+            btnLoc.UseVisualStyleBackColor = true;
+            // 
+            // grbTheoMucQuaHan
+            // 
+            grbTheoMucQuaHan.BackColor = Color.LightGray;
+            grbTheoMucQuaHan.Controls.Add(ckbMucDoQuaHan);
+            grbTheoMucQuaHan.Controls.Add(cmbMucQuaHan);
+            grbTheoMucQuaHan.Controls.Add(textBox3);
+            grbTheoMucQuaHan.Location = new Point(1261, 21);
+            grbTheoMucQuaHan.Name = "grbTheoMucQuaHan";
+            grbTheoMucQuaHan.Size = new Size(266, 211);
+            grbTheoMucQuaHan.TabIndex = 11;
+            grbTheoMucQuaHan.TabStop = false;
+            grbTheoMucQuaHan.Text = "Theo mức quá hạn";
+            // 
+            // ckbMucDoQuaHan
+            // 
+            ckbMucDoQuaHan.AutoSize = true;
+            ckbMucDoQuaHan.Location = new Point(170, 174);
+            ckbMucDoQuaHan.Name = "ckbMucDoQuaHan";
+            ckbMucDoQuaHan.Size = new Size(96, 31);
+            ckbMucDoQuaHan.TabIndex = 2;
+            ckbMucDoQuaHan.Text = "Chọn";
+            ckbMucDoQuaHan.UseVisualStyleBackColor = true;
+            // 
+            // cmbMucQuaHan
+            // 
+            cmbMucQuaHan.FormattingEnabled = true;
+            cmbMucQuaHan.Location = new Point(22, 123);
+            cmbMucQuaHan.Name = "cmbMucQuaHan";
+            cmbMucQuaHan.Size = new Size(223, 35);
+            cmbMucQuaHan.TabIndex = 1;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(22, 50);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(204, 35);
+            textBox3.TabIndex = 0;
+            textBox3.Text = "Mức độ quá hạn:";
+            // 
+            // grbTheoLoaiSach
+            // 
+            grbTheoLoaiSach.BackColor = Color.LightGray;
+            grbTheoLoaiSach.Controls.Add(ckbLoaiSach);
+            grbTheoLoaiSach.Controls.Add(cmbLoaiSach);
+            grbTheoLoaiSach.Controls.Add(textBox2);
+            grbTheoLoaiSach.Location = new Point(934, 21);
+            grbTheoLoaiSach.Name = "grbTheoLoaiSach";
+            grbTheoLoaiSach.Size = new Size(321, 211);
+            grbTheoLoaiSach.TabIndex = 10;
+            grbTheoLoaiSach.TabStop = false;
+            grbTheoLoaiSach.Text = "Theo loại sách";
+            // 
+            // ckbLoaiSach
+            // 
+            ckbLoaiSach.AutoSize = true;
+            ckbLoaiSach.Location = new Point(225, 180);
+            ckbLoaiSach.Name = "ckbLoaiSach";
+            ckbLoaiSach.Size = new Size(96, 31);
+            ckbLoaiSach.TabIndex = 2;
+            ckbLoaiSach.Text = "Chọn";
+            ckbLoaiSach.UseVisualStyleBackColor = true;
+            // 
+            // cmbLoaiSach
+            // 
+            cmbLoaiSach.FormattingEnabled = true;
+            cmbLoaiSach.Location = new Point(6, 123);
+            cmbLoaiSach.Name = "cmbLoaiSach";
+            cmbLoaiSach.Size = new Size(296, 35);
+            cmbLoaiSach.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(36, 50);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(214, 35);
+            textBox2.TabIndex = 0;
+            textBox2.Text = "Thể loại sách:";
             // 
             // grbTheoLoaiDocGia
             // 
@@ -184,9 +293,9 @@
             // cmbTenSach
             // 
             cmbTenSach.FormattingEnabled = true;
-            cmbTenSach.Location = new Point(27, 121);
+            cmbTenSach.Location = new Point(6, 123);
             cmbTenSach.Name = "cmbTenSach";
-            cmbTenSach.Size = new Size(230, 35);
+            cmbTenSach.Size = new Size(274, 35);
             cmbTenSach.TabIndex = 1;
             // 
             // textBox4
@@ -232,6 +341,16 @@
             grpLocBaoCao.TabIndex = 0;
             grpLocBaoCao.TabStop = false;
             grpLocBaoCao.Text = "Lọc báo cáo sách đang mượn";
+            // 
+            // ckbTheoNgay
+            // 
+            ckbTheoNgay.AutoSize = true;
+            ckbTheoNgay.Location = new Point(260, 228);
+            ckbTheoNgay.Name = "ckbTheoNgay";
+            ckbTheoNgay.Size = new Size(96, 31);
+            ckbTheoNgay.TabIndex = 4;
+            ckbTheoNgay.Text = "Chọn";
+            ckbTheoNgay.UseVisualStyleBackColor = true;
             // 
             // dtpDenNgay
             // 
@@ -448,112 +567,6 @@
             lblThongKe_SachQuaHan.Text = "24";
             lblThongKe_SachQuaHan.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // grbTheoLoaiSach
-            // 
-            grbTheoLoaiSach.BackColor = Color.LightGray;
-            grbTheoLoaiSach.Controls.Add(ckbLoaiSach);
-            grbTheoLoaiSach.Controls.Add(cmbLoaiSach);
-            grbTheoLoaiSach.Controls.Add(textBox2);
-            grbTheoLoaiSach.Location = new Point(934, 21);
-            grbTheoLoaiSach.Name = "grbTheoLoaiSach";
-            grbTheoLoaiSach.Size = new Size(321, 211);
-            grbTheoLoaiSach.TabIndex = 10;
-            grbTheoLoaiSach.TabStop = false;
-            grbTheoLoaiSach.Text = "Theo loại sách";
-            // 
-            // ckbLoaiSach
-            // 
-            ckbLoaiSach.AutoSize = true;
-            ckbLoaiSach.Location = new Point(225, 180);
-            ckbLoaiSach.Name = "ckbLoaiSach";
-            ckbLoaiSach.Size = new Size(96, 31);
-            ckbLoaiSach.TabIndex = 2;
-            ckbLoaiSach.Text = "Chọn";
-            ckbLoaiSach.UseVisualStyleBackColor = true;
-            // 
-            // cmbLoaiSach
-            // 
-            cmbLoaiSach.FormattingEnabled = true;
-            cmbLoaiSach.Location = new Point(22, 123);
-            cmbLoaiSach.Name = "cmbLoaiSach";
-            cmbLoaiSach.Size = new Size(280, 35);
-            cmbLoaiSach.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(36, 50);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(214, 35);
-            textBox2.TabIndex = 0;
-            textBox2.Text = "Thể loại sách:";
-            // 
-            // grbTheoMucQuaHan
-            // 
-            grbTheoMucQuaHan.BackColor = Color.LightGray;
-            grbTheoMucQuaHan.Controls.Add(ckbMucDoQuaHan);
-            grbTheoMucQuaHan.Controls.Add(cmbMucQuaHan);
-            grbTheoMucQuaHan.Controls.Add(textBox3);
-            grbTheoMucQuaHan.Location = new Point(1261, 21);
-            grbTheoMucQuaHan.Name = "grbTheoMucQuaHan";
-            grbTheoMucQuaHan.Size = new Size(266, 211);
-            grbTheoMucQuaHan.TabIndex = 11;
-            grbTheoMucQuaHan.TabStop = false;
-            grbTheoMucQuaHan.Text = "Theo mức quá hạn";
-            // 
-            // ckbMucDoQuaHan
-            // 
-            ckbMucDoQuaHan.AutoSize = true;
-            ckbMucDoQuaHan.Location = new Point(170, 174);
-            ckbMucDoQuaHan.Name = "ckbMucDoQuaHan";
-            ckbMucDoQuaHan.Size = new Size(96, 31);
-            ckbMucDoQuaHan.TabIndex = 2;
-            ckbMucDoQuaHan.Text = "Chọn";
-            ckbMucDoQuaHan.UseVisualStyleBackColor = true;
-            // 
-            // cmbMucQuaHan
-            // 
-            cmbMucQuaHan.FormattingEnabled = true;
-            cmbMucQuaHan.Location = new Point(22, 123);
-            cmbMucQuaHan.Name = "cmbMucQuaHan";
-            cmbMucQuaHan.Size = new Size(223, 35);
-            cmbMucQuaHan.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(22, 50);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(204, 35);
-            textBox3.TabIndex = 0;
-            textBox3.Text = "Mức độ quá hạn:";
-            // 
-            // btnChiTiet
-            // 
-            btnChiTiet.Location = new Point(1550, 144);
-            btnChiTiet.Name = "btnChiTiet";
-            btnChiTiet.Size = new Size(148, 65);
-            btnChiTiet.TabIndex = 13;
-            btnChiTiet.Text = "Chi tiết";
-            btnChiTiet.UseVisualStyleBackColor = true;
-            // 
-            // btnLoc
-            // 
-            btnLoc.Location = new Point(1550, 39);
-            btnLoc.Name = "btnLoc";
-            btnLoc.Size = new Size(148, 65);
-            btnLoc.TabIndex = 12;
-            btnLoc.Text = "Lọc";
-            btnLoc.UseVisualStyleBackColor = true;
-            // 
-            // ckbTheoNgay
-            // 
-            ckbTheoNgay.AutoSize = true;
-            ckbTheoNgay.Location = new Point(260, 228);
-            ckbTheoNgay.Name = "ckbTheoNgay";
-            ckbTheoNgay.Size = new Size(96, 31);
-            ckbTheoNgay.TabIndex = 4;
-            ckbTheoNgay.Text = "Chọn";
-            ckbTheoNgay.UseVisualStyleBackColor = true;
-            // 
             // fBaoCao
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -566,6 +579,10 @@
             Text = "Báo cáo và thống kê";
             tbcBaoCao.ResumeLayout(false);
             tabSachDangMuon.ResumeLayout(false);
+            grbTheoMucQuaHan.ResumeLayout(false);
+            grbTheoMucQuaHan.PerformLayout();
+            grbTheoLoaiSach.ResumeLayout(false);
+            grbTheoLoaiSach.PerformLayout();
             grbTheoLoaiDocGia.ResumeLayout(false);
             grbTheoLoaiDocGia.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -580,10 +597,6 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
-            grbTheoLoaiSach.ResumeLayout(false);
-            grbTheoLoaiSach.PerformLayout();
-            grbTheoMucQuaHan.ResumeLayout(false);
-            grbTheoMucQuaHan.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -645,5 +658,6 @@
         private ComboBox cmbLoaiSach;
         private TextBox textBox2;
         private CheckBox ckbTheoNgay;
+        private Button btnTaiLai;
     }
 }

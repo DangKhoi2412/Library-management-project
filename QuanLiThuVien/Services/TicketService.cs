@@ -212,7 +212,51 @@ namespace QuanLiThuVien.Services
                 TrangThai = borrowingTicket.TrangThai
             };
         }
+        public List<BaoCaoViewModel> GetBaoCaoViewModels()
+        {
+            // Lấy tất cả dữ liệu gốc một lần
+            var allTickets = _borrowingTicketRepository.GetAll();
+            var allReaders = _readerRepository.GetAll().ToDictionary(r => r.MaDocGia, r => r);
+            var allBooks = _bookRepository.GetAll().ToDictionary(b => b.Id, b => b);
 
+            List<BaoCaoViewModel> reportViewModels = new List<BaoCaoViewModel>();
+
+            foreach (var ticket in allTickets)
+            {
+                // Luôn cập nhật trạng thái quá hạn mới nhất
+                //UpdateOverdueStatus(ticket);
+
+                // Tra cứu thông tin (dùng TryGetValue để an toàn)
+                allReaders.TryGetValue(ticket.MaDocGia, out Reader reader);
+                allBooks.TryGetValue(ticket.MaSach, out Book book);
+
+                // Tạo DTO mới
+                var vm = new BaoCaoViewModel
+                {
+                    // Thuộc tính hiển thị
+                    MaPhieuMuon = ticket.Id,
+                    TenDocGia = reader?.Ten ?? "Không rõ", // Dùng tên nếu có, nếu không thì báo "Không rõ"
+                    TenSach = book?.TenSach ?? "Không rõ", // Dùng tên nếu có
+                    SoLuong = ticket.SoLuong,
+                    NgayMuon = ticket.NgayMuon,
+                    NgayTraDuKien = ticket.NgayTraDuKien,
+                    SoNgayQuaHan = ticket.SoNgayQuaHan,
+                    TienPhat = ticket.TienPhat,
+                    GhiChu = ticket.GhiChu,
+
+                    // Thuộc tính ẩn để lọc
+                    MaSach = ticket.MaSach,
+                    MaDocGia = ticket.MaDocGia,
+                    LoaiDocGia = reader?.LoaiDocGia ?? TypeOfReader.Khac, // Dùng enum nếu có
+                    TheLoaiSach = book?.TheLoai ?? BookCategory.Khac, // Dùng enum nếu có
+                    TrangThai = ticket.TrangThai
+                };
+
+                reportViewModels.Add(vm);
+            }
+
+            return reportViewModels;
+        }
         public List<ReturnTicketViewModel> GetActiveBorrowingDetails()
         {
             List<BorrowingTicket> allTickets = _borrowingTicketRepository.GetAll();
