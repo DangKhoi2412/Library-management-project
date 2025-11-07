@@ -1,0 +1,202 @@
+﻿[
+  {
+    "Id": "B001",
+    "GhiChu": "Sách CNTT nhập mới",
+    "TenSach": "Lập trình C# hiện đại",
+    "TacGiaId": "TG001",
+    "TheLoai": 7,
+    "NhaXuatBan": "NXB Trẻ",
+    "NamXuatBan": 2023,
+    "SoLuongNhap": 10
+  },
+  {
+    "Id": "B002",
+    "GhiChu": "",
+    "TenSach": "Cấu trúc dữ liệu và giải thuật",
+    "TacGiaId": "TG002",
+    "TheLoai": 6,
+    "NhaXuatBan": "NXB Giáo Dục",
+    "NamXuatBan": 2021,
+    "SoLuongNhap": 8
+  },
+  {
+    "Id": "B003",
+    "GhiChu": "",
+    "TenSach": "Lịch sử Việt Nam",
+    "TacGiaId": "TG003",
+    "TheLoai": 4,
+    "NhaXuatBan": "NXB Văn Hóa",
+    "NamXuatBan": 2018,
+    "SoLuongNhap": 6
+  },
+  {
+    "Id": "B004",
+    "GhiChu": "Tài liệu tham khảo kinh tế",
+    "TenSach": "Kinh tế học cơ bản",
+    "TacGiaId": "TG004",
+    "TheLoai": 9,
+    "NhaXuatBan": "NXB Kinh Tế",
+    "NamXuatBan": 2020,
+    "SoLuongNhap": 5
+  },
+  {
+    "Id": "B005",
+    "GhiChu": "",
+    "TenSach": "Tiếng Anh giao tiếp",
+    "TacGiaId": "TG005",
+    "TheLoai": 17,
+    "NhaXuatBan": "NXB Ngoại Ngữ",
+    "NamXuatBan": 2019,
+    "SoLuongNhap": 12
+  },
+  {
+    "Id": "B006",
+    "GhiChu": "Sách bán chạy",
+    "TenSach": "Nhà giả kim",
+    "TacGiaId": "TG006",
+    "TheLoai": 1,
+    "NhaXuatBan": "NXB Văn Học",
+    "NamXuatBan": 2017,
+    "SoLuongNhap": 25
+  },
+  {
+    "Id": "B007",
+    "GhiChu": "",
+    "TenSach": "Hệ điều hành máy tính",
+    "TacGiaId": "TG007",
+    "TheLoai": 7,
+    "NhaXuatBan": "NXB Khoa học và Kỹ thuật",
+    "NamXuatBan": 2022,
+    "SoLuongNhap": 7
+  },
+  {
+    "Id": "B008",
+    "GhiChu": "",
+    "TenSach": "Tâm lý học đám đông",
+    "TacGiaId": "TG008",
+    "TheLoai": 14,
+    "NhaXuatBan": "NXB Tri Thức",
+    "NamXuatBan": 2020,
+    "SoLuongNhap": 9
+  },
+  {
+    "Id": "B009",
+    "GhiChu": "Thơ hiện đại",
+    "TenSach": "Mắt biếc",
+    "TacGiaId": "TG009",
+    "TheLoai": 1,
+    "NhaXuatBan": "NXB Trẻ",
+    "NamXuatBan": 2019,
+    "SoLuongNhap": 15
+  },
+  {
+    "Id": "B010",
+    "GhiChu": "",
+    "TenSach": "Vật lý đại cương",
+    "TacGiaId": "TG010",
+    "TheLoai": 6,
+    "NhaXuatBan": "NXB Bách Khoa",
+    "NamXuatBan": 2021,
+    "SoLuongNhap": 11
+  },
+  {
+    "Id": "B011",
+    "GhiChu": "",
+    "TenSach": "Marketing căn bản",
+    "TacGiaId": "TG011",
+    "TheLoai": 9,
+    "NhaXuatBan": "NXB Tổng hợp TP.HCM",
+    "NamXuatBan": 2018,
+    "SoLuongNhap": 10
+  },
+  {
+    "Id": "B012",
+    "GhiChu": "Truyện thiếu nhi",
+    "TenSach": "Dế Mèn phiêu lưu ký",
+    "TacGiaId": "TG012",
+    "TheLoai": 3,
+    "NhaXuatBan": "NXB Kim Đồng",
+    "NamXuatBan": 2015,
+    "SoLuongNhap": 20
+  },
+  {
+    "Id": "B013",
+    "GhiChu": "",
+    "TenSach": "Tư duy nhanh và chậm",
+    "TacGiaId": "TG013",
+    "TheLoai": 14,
+    "NhaXuatBan": "NXB Lao Động",
+    "NamXuatBan": 2016,
+    "SoLuongNhap": 13
+  },
+  {
+    "Id": "B014",
+    "GhiChu": "Sách kỹ năng mềm",
+    "TenSach": "Đắc nhân tâm",
+    "TacGiaId": "TG014",
+    "TheLoai": 15,
+    "NhaXuatBan": "NXB Tổng hợp TP.HCM",
+    "NamXuatBan": 2014,
+    "SoLuongNhap": 30
+  },
+  {
+    "Id": "B015",
+    "GhiChu": "Tài liệu chuyên ngành",
+    "TenSach": "Trí tuệ nhân tạo",
+    "TacGiaId": "TG015",
+    "TheLoai": 7,
+    "NhaXuatBan": "NXB Thông tin và Truyền thông",
+    "NamXuatBan": 2023,
+    "SoLuongNhap": 5
+  },
+  {
+    "Id": "B016",
+    "GhiChu": "",
+    "TenSach": "Sapiens: Lược sử loài người",
+    "TacGiaId": "TG016",
+    "TheLoai": 4,
+    "NhaXuatBan": "NXB Thế Giới",
+    "NamXuatBan": 2017,
+    "SoLuongNhap": 18
+  },
+  {
+    "Id": "B017",
+    "GhiChu": "",
+    "TenSach": "Hóa học hữu cơ",
+    "TacGiaId": "TG017",
+    "TheLoai": 6,
+    "NhaXuatBan": "NXB Giáo Dục",
+    "NamXuatBan": 2020,
+    "SoLuongNhap": 9
+  },
+  {
+    "Id": "B018",
+    "GhiChu": "",
+    "TenSach": "Số đỏ",
+    "TacGiaId": "TG018",
+    "TheLoai": 1,
+    "NhaXuatBan": "NXB Hội Nhà Văn",
+    "NamXuatBan": 2012,
+    "SoLuongNhap": 14
+  },
+  {
+    "Id": "B019",
+    "GhiChu": "Sách nghệ thuật sống",
+    "TenSach": "Hiểu về trái tim",
+    "TacGiaId": "TG019",
+    "TheLoai": 15,
+    "NhaXuatBan": "NXB Trẻ",
+    "NamXuatBan": 2011,
+    "SoLuongNhap": 22
+  },
+  {
+    "Id": "B020",
+    "GhiChu": "",
+    "TenSach": "Bố già",
+    "TacGiaId": "TG020",
+    "TheLoai": 2,
+    "NhaXuatBan": "NXB Văn Học",
+    "NamXuatBan": 2019,
+    "SoLuongNhap": 16
+  }
+]

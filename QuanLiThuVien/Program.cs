@@ -1,0 +1,23 @@
+﻿using QuanLiThuVien.Data;
+using QuanLiThuVien.Model;
+
+namespace QuanLiThuVien
+{
+    internal static class Program
+    {
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            //Xin chào thầy và các bạn
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+            Application.Run(new fLogin());
+            Console.WriteLine("S? tác gi?: " + DataManager.Instance.TacGiaRepository.GetAll().Count);
+
+        }
+    }
+}
