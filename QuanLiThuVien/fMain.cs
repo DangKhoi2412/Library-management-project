@@ -135,5 +135,11 @@ namespace QuanLiThuVien
             fBaoCao fBaoCao = new fBaoCao();
             fBaoCao.ShowDialog();
         }
+
+        private void mnuTroGiup_Click(object sender, EventArgs e)
+        {
+            fGioiThieu fGioiThieu = new fGioiThieu();
+            fGioiThieu.ShowDialog();
+        }
     }
 }

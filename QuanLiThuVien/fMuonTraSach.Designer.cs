@@ -408,6 +408,7 @@
             // 
             // tabTaoPhieuMuon
             // 
+            tabTaoPhieuMuon.BackColor = Color.Gainsboro;
             tabTaoPhieuMuon.Controls.Add(grpBookInfo);
             tabTaoPhieuMuon.Controls.Add(grpDanhSachPhieuMuon);
             tabTaoPhieuMuon.Controls.Add(grpChucNang);
@@ -419,10 +420,10 @@
             tabTaoPhieuMuon.Size = new Size(1705, 1382);
             tabTaoPhieuMuon.TabIndex = 0;
             tabTaoPhieuMuon.Text = "Tạo phiếu mượn";
-            tabTaoPhieuMuon.UseVisualStyleBackColor = true;
             // 
             // grpBookInfo
             // 
+            grpBookInfo.BackColor = SystemColors.Control;
             grpBookInfo.Controls.Add(textBox5);
             grpBookInfo.Controls.Add(textBox4);
             grpBookInfo.Controls.Add(textBox3);
@@ -522,6 +523,7 @@
             // 
             // grpDanhSachPhieuMuon
             // 
+            grpDanhSachPhieuMuon.BackColor = SystemColors.Control;
             grpDanhSachPhieuMuon.Controls.Add(dgvBorrowList);
             grpDanhSachPhieuMuon.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpDanhSachPhieuMuon.Location = new Point(40, 647);
@@ -542,6 +544,7 @@
             // 
             // grpChucNang
             // 
+            grpChucNang.BackColor = SystemColors.Control;
             grpChucNang.Controls.Add(btnLoadDanhSach);
             grpChucNang.Controls.Add(btnHuy);
             grpChucNang.Controls.Add(btnGiaHan);
@@ -557,51 +560,57 @@
             // 
             // btnLoadDanhSach
             // 
+            btnLoadDanhSach.BackColor = Color.LightSkyBlue;
             btnLoadDanhSach.Location = new Point(880, 34);
             btnLoadDanhSach.Name = "btnLoadDanhSach";
             btnLoadDanhSach.Size = new Size(200, 63);
             btnLoadDanhSach.TabIndex = 4;
             btnLoadDanhSach.Text = "Load danh sách";
-            btnLoadDanhSach.UseVisualStyleBackColor = true;
+            btnLoadDanhSach.UseVisualStyleBackColor = false;
             // 
             // btnHuy
             // 
+            btnHuy.BackColor = Color.LemonChiffon;
             btnHuy.Location = new Point(695, 34);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(112, 63);
             btnHuy.TabIndex = 3;
             btnHuy.Text = "Hủy";
-            btnHuy.UseVisualStyleBackColor = true;
+            btnHuy.UseVisualStyleBackColor = false;
             // 
             // btnGiaHan
             // 
+            btnGiaHan.BackColor = Color.LightSalmon;
             btnGiaHan.Location = new Point(521, 34);
             btnGiaHan.Name = "btnGiaHan";
             btnGiaHan.Size = new Size(117, 63);
             btnGiaHan.TabIndex = 2;
             btnGiaHan.Text = "Gia hạn";
-            btnGiaHan.UseVisualStyleBackColor = true;
+            btnGiaHan.UseVisualStyleBackColor = false;
             // 
             // btnChoMuon
             // 
+            btnChoMuon.BackColor = Color.LightSkyBlue;
             btnChoMuon.Location = new Point(318, 34);
             btnChoMuon.Name = "btnChoMuon";
             btnChoMuon.Size = new Size(145, 63);
             btnChoMuon.TabIndex = 1;
             btnChoMuon.Text = "Cho mượn";
-            btnChoMuon.UseVisualStyleBackColor = true;
+            btnChoMuon.UseVisualStyleBackColor = false;
             // 
             // btnThemPhieuMuon
             // 
+            btnThemPhieuMuon.BackColor = Color.LawnGreen;
             btnThemPhieuMuon.Location = new Point(79, 34);
             btnThemPhieuMuon.Name = "btnThemPhieuMuon";
             btnThemPhieuMuon.Size = new Size(170, 63);
             btnThemPhieuMuon.TabIndex = 0;
             btnThemPhieuMuon.Text = "Thêm phiếu mượn";
-            btnThemPhieuMuon.UseVisualStyleBackColor = true;
+            btnThemPhieuMuon.UseVisualStyleBackColor = false;
             // 
             // grpSearchBorrow
             // 
+            grpSearchBorrow.BackColor = SystemColors.Control;
             grpSearchBorrow.Controls.Add(grpInputSearch);
             grpSearchBorrow.Controls.Add(grpSearchBy);
             grpSearchBorrow.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -664,6 +673,7 @@
             // 
             // grpCreateBorrow
             // 
+            grpCreateBorrow.BackColor = SystemColors.Control;
             grpCreateBorrow.Controls.Add(dtpNgayMuon);
             grpCreateBorrow.Controls.Add(txtSLMuon);
             grpCreateBorrow.Controls.Add(cbbMaSach);

@@ -110,32 +110,34 @@
             // 
             // btnTaiLai
             // 
+            btnTaiLai.BackColor = Color.SandyBrown;
             btnTaiLai.Location = new Point(1550, 163);
             btnTaiLai.Name = "btnTaiLai";
             btnTaiLai.Size = new Size(148, 65);
             btnTaiLai.TabIndex = 14;
             btnTaiLai.Text = "Load";
-            btnTaiLai.UseVisualStyleBackColor = true;
-
+            btnTaiLai.UseVisualStyleBackColor = false;
             // 
             // btnChiTiet
             // 
+            btnChiTiet.BackColor = Color.SkyBlue;
             btnChiTiet.Location = new Point(1550, 92);
             btnChiTiet.Name = "btnChiTiet";
             btnChiTiet.Size = new Size(148, 65);
             btnChiTiet.TabIndex = 13;
             btnChiTiet.Text = "Chi tiết";
-            btnChiTiet.UseVisualStyleBackColor = true;
+            btnChiTiet.UseVisualStyleBackColor = false;
             btnChiTiet.Click += btnChiTiet_Click;
             // 
             // btnLoc
             // 
+            btnLoc.BackColor = Color.Thistle;
             btnLoc.Location = new Point(1550, 21);
             btnLoc.Name = "btnLoc";
             btnLoc.Size = new Size(148, 65);
             btnLoc.TabIndex = 12;
             btnLoc.Text = "Lọc";
-            btnLoc.UseVisualStyleBackColor = true;
+            btnLoc.UseVisualStyleBackColor = false;
             // 
             // grbTheoMucQuaHan
             // 
@@ -288,6 +290,7 @@
             // 
             // textBox4
             // 
+            textBox4.BackColor = SystemColors.Window;
             textBox4.Location = new Point(27, 48);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(201, 35);
@@ -328,7 +331,7 @@
             grpLocBaoCao.Size = new Size(356, 259);
             grpLocBaoCao.TabIndex = 0;
             grpLocBaoCao.TabStop = false;
-            grpLocBaoCao.Text = "Lọc báo cáo sách đang mượn";
+            grpLocBaoCao.Text = "Theo ngày";
             // 
             // ckbTheoNgay
             // 
@@ -357,6 +360,7 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.BackColor = SystemColors.Window;
             label10.BorderStyle = BorderStyle.Fixed3D;
             label10.Location = new Point(186, 129);
             label10.Name = "label10";
@@ -367,6 +371,7 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.BackColor = SystemColors.Window;
             label9.BorderStyle = BorderStyle.Fixed3D;
             label9.Location = new Point(11, 31);
             label9.Name = "label9";

@@ -37,13 +37,13 @@
             mnuMTS_TaoPhieuMuon = new ToolStripMenuItem();
             mnuMTS_TraSach = new ToolStripMenuItem();
             mnuBaoCao = new ToolStripMenuItem();
+            báoCáoToolStripMenuItem = new ToolStripMenuItem();
             mnuDuLieu = new ToolStripMenuItem();
             mnuTroGiup = new ToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
-            báoCáoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -107,6 +107,12 @@
             mnuBaoCao.Text = "Báo cáo";
             mnuBaoCao.Click += mnuBaoCao_Click;
             // 
+            // báoCáoToolStripMenuItem
+            // 
+            báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
+            báoCáoToolStripMenuItem.Size = new Size(203, 40);
+            báoCáoToolStripMenuItem.Text = "Báo cáo";
+            // 
             // mnuDuLieu
             // 
             mnuDuLieu.Checked = true;
@@ -121,6 +127,7 @@
             mnuTroGiup.Name = "mnuTroGiup";
             mnuTroGiup.Size = new Size(118, 36);
             mnuTroGiup.Text = "Trợ giúp";
+            mnuTroGiup.Click += mnuTroGiup_Click;
             // 
             // contextMenuStrip1
             // 
@@ -157,12 +164,6 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 4;
             pictureBox4.TabStop = false;
-            // 
-            // báoCáoToolStripMenuItem
-            // 
-            báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
-            báoCáoToolStripMenuItem.Size = new Size(270, 40);
-            báoCáoToolStripMenuItem.Text = "Báo cáo";
             // 
             // fmain
             // 
