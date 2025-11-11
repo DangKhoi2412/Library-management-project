@@ -500,7 +500,7 @@
             Controls.Add(tbcBaoCao);
             Name = "fBaoCao";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Báo cáo và thống kê";
+            Text = "Báo cáo ";
             tbcBaoCao.ResumeLayout(false);
             tabSachDangMuon.ResumeLayout(false);
             grbTheoMucQuaHan.ResumeLayout(false);

@@ -5,7 +5,7 @@ namespace QuanLiThuVien.DTO
 {
     public class BaoCaoViewModel
     {
-        // === CÁC THUỘC TÍNH ĐỂ HIỂN THỊ TRÊN DATAGRIDVIEW ===
+
         public string MaPhieuMuon { get; set; }
         public string TenDocGia { get; set; }
         public string TenSach { get; set; }
@@ -17,7 +17,7 @@ namespace QuanLiThuVien.DTO
         public decimal TienPhat { get; set; }
         public string GhiChu { get; set; }
 
-        // === CÁC THUỘC TÍNH ẨN (DÙNG ĐỂ LỌC VÀ TÍNH TOÁN) ===
+
         public string MaSach { get; set; }
         public string MaDocGia { get; set; }
         public TypeOfReader LoaiDocGia { get; set; }

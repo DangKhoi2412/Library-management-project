@@ -34,7 +34,6 @@ namespace QuanLiThuVien.Data
             _readerRepository = new Repository<Reader>(Path.Combine(_basePath, "Readers.json"));
             _borrowingTicketRepository = new Repository<BorrowingTicket>(Path.Combine(_basePath, "BorrowingTickets.json"));
             
-
             InitializeData();
         }
         public IRepository<TacGia> TacGiaRepository => _tacGiaRepository;
@@ -42,7 +41,6 @@ namespace QuanLiThuVien.Data
         public IRepository<Reader> ReaderRepository => _readerRepository;
         public IRepository<BorrowingTicket> BorrowingTicketRepository => _borrowingTicketRepository;
         
-
         public void SaveAllChanges()
         {
             try

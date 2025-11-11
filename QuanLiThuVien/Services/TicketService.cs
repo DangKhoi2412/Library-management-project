@@ -114,15 +114,15 @@ namespace QuanLiThuVien.Services
                 decimal finePerDay;
                 if (reader.LoaiDocGia == TypeOfReader.HocSinh)
                 {
-                    finePerDay = 7000;
+                    finePerDay = 5000;
                 }
                 else if (reader.LoaiDocGia == TypeOfReader.GiaoVien)
                 {
-                    finePerDay = 5000;
+                    finePerDay = 10000;
                 }
                 else
                 {
-                    finePerDay = 3636;
+                    finePerDay = 10000;
                 }
                 fine = overdueDays * finePerDay;
             }
