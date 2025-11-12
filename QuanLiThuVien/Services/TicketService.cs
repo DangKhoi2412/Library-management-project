@@ -1,7 +1,7 @@
 ﻿using QuanLiThuVien.DTO;
 using QuanLiThuVien.Model;
 using QuanLiThuVien.Model.Enum;
-using QuanLiThuVien.Repositories;
+using QuanLiThuVien.Interface;
 using System;
 using System.Collections.Generic;
 

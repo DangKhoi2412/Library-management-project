@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLiThuVien.Repositories
+namespace QuanLiThuVien.Interface
 {
     public interface IRepository<T> where T : class
     {

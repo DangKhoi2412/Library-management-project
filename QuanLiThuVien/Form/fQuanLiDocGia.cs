@@ -1,4 +1,5 @@
 ﻿using QuanLiThuVien.Data;
+using QuanLiThuVien.Interface;
 using QuanLiThuVien.Model;
 using QuanLiThuVien.Model.Enum;
 using QuanLiThuVien.Repositories;

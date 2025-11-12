@@ -1,4 +1,5 @@
 ﻿using QuanLiThuVien.Data;
+using QuanLiThuVien.Interface;
 using QuanLiThuVien.Model;
 using QuanLiThuVien.Model.Enum;
 using QuanLiThuVien.Repositories;
@@ -111,13 +112,11 @@ namespace QuanLiThuVien
             dgvBooks.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "SoLuongNhap", HeaderText = "SL Nhập" });
             dgvBooks.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = "GhiChu", HeaderText = "Ghi chú" });
 
-            // Cài đặt các thuộc tính chung
             dgvBooks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvBooks.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvBooks.ReadOnly = true;
             dgvBooks.AllowUserToAddRows = false;
 
-            // Liên kết DataSource MỘT LẦN DUY NHẤT
             dgvBooks.DataSource = _bindingBooks;
         }
 
@@ -199,11 +198,11 @@ namespace QuanLiThuVien
             txtGhiChu.Text = book.GhiChu;
 
             bool previousState = cbbTheLoai.Enabled;
-            // Tạm thời bật nó lên để đảm bảo giá trị được cập nhật và hiển thị
+
             cbbTheLoai.Enabled = true;
-            // Gán giá trị mới
+
             cbbTheLoai.SelectedValue = book.TheLoai;
-            // Trả nó về trạng thái ban đầu (thường là false khi ở chế độ Viewing)
+
             cbbTheLoai.Enabled = previousState;
         }
 
@@ -361,7 +360,7 @@ namespace QuanLiThuVien
             }
         }
 
-        // ============ SEARCH ============
+
         private void txtSearchKeyword_TextChanged(object sender, EventArgs e)
         {
             ApplySearch();
@@ -381,7 +380,6 @@ namespace QuanLiThuVien
 
         private void ApplySearch(string selectedId = null)
         {
-            // BƯỚC 1: "TẮT CÔNG TẮC" - Tạm thời ngắt kết nối sự kiện để tránh "bão sự kiện"
             dgvBooks.SelectionChanged -= dgvBooks_SelectionChanged;
 
             string keyword = txtSearchKeyword.Text?.Trim() ?? string.Empty;
@@ -403,29 +401,25 @@ namespace QuanLiThuVien
                 _bindingBooks.Add(b);
             }
 
-            // BƯỚC 2: THỰC HIỆN LOGIC CHỌN DÒNG TRONG "IM LẶNG"
-            // Vì sự kiện đã bị tắt, các lệnh .Selected = true sẽ không kích hoạt hàm xử lý của chúng ta.
             if (!string.IsNullOrEmpty(selectedId))
             {
-                // Ưu tiên chọn dòng có ID được chỉ định.
+                
                 SelectRowById(selectedId);
             }
             else if (_bindingBooks.Count > 0)
             {
-                // Nếu không, chọn dòng đầu tiên như mặc định.
+                
                 dgvBooks.ClearSelection();
                 dgvBooks.Rows[0].Selected = true;
             }
 
-            // BƯỚC 3: "BẬT LẠI CÔNG TẮC" - Kết nối lại sự kiện cho các tương tác sau này của người dùng.
+            
             dgvBooks.SelectionChanged += dgvBooks_SelectionChanged;
 
-            // BƯỚC 4: KÍCH HOẠT THỦ CÔNG - Bây giờ DataGridView đã ở trạng thái ổn định và chính xác,
-            // chúng ta tự gọi hàm xử lý sự kiện MỘT LẦN DUY NHẤT để đồng bộ hóa các TextBox.
-            // Điều này đảm bảo các TextBox sẽ hiển thị chính xác thông tin của dòng đang được tô màu xanh.
+            
             dgvBooks_SelectionChanged(this, EventArgs.Empty);
 
-            // Nếu sau khi tìm kiếm không còn dòng nào, đảm bảo các ô nhập liệu được xóa.
+            
             if (dgvBooks.CurrentRow == null)
             {
                 ClearInputs();
