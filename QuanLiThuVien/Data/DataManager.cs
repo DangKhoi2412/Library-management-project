@@ -123,7 +123,7 @@ namespace QuanLiThuVien.Data
                 LoadInitialEntities(BorrowingTicketRepository, "BorrowingTickets.json");
                 
 
-                SaveAllChanges();
+                //SaveAllChanges();
             }
             catch (Exception ex)
             {
