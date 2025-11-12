@@ -36,8 +36,8 @@ namespace QuanLiThuVien
         public fQuanLiSach()
         {
             InitializeComponent();
-            bookRepository = DataManager.Instance.BookRepository;
             tacGiaRepository = DataManager.Instance.TacGiaRepository;
+            bookRepository = DataManager.Instance.BookRepository;
             HookEvents();
             InitializeUi();
         }
