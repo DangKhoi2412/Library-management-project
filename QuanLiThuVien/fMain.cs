@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLiThuVien.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace QuanLiThuVien
         public fmain()
         {
             InitializeComponent();
+            DataManager dataManager = DataManager.Instance;
         }
 
         private void mnuQLS_DanhSachSach_Click(object sender, EventArgs e)
@@ -140,6 +142,11 @@ namespace QuanLiThuVien
         {
             fGioiThieu fGioiThieu = new fGioiThieu();
             fGioiThieu.ShowDialog();
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -132,8 +132,8 @@ namespace QuanLiThuVien
         {
             try
             {
-                _bindingBooks.Clear();
                 List<Book> list = bookRepository.GetAll();
+                _bindingBooks.Clear();
                 foreach (Book b in list)
                 {
                     _bindingBooks.Add(b);

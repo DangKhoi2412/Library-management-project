@@ -92,8 +92,8 @@ namespace QuanLiThuVien
         {
             try
             {
-                _bindingReaders.Clear();
                 List<Reader> readers = _readerRepository.GetAll();
+                _bindingReaders.Clear();
                 foreach (Reader reader in readers)
                 {
                     _bindingReaders.Add(reader);
