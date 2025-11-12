@@ -132,7 +132,6 @@ namespace QuanLiThuVien
         {
             try
             {
-                bookRepository.LoadFromFile();
                 _bindingBooks.Clear();
                 List<Book> list = bookRepository.GetAll();
                 foreach (Book b in list)

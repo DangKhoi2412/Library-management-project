@@ -92,7 +92,6 @@ namespace QuanLiThuVien
         {
             try
             {
-                _readerRepository.LoadFromFile();
                 _bindingReaders.Clear();
                 List<Reader> readers = _readerRepository.GetAll();
                 foreach (Reader reader in readers)
