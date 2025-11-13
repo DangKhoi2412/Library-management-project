@@ -37,7 +37,7 @@
             btnThem = new Button();
             grpDanhSachDocGia = new GroupBox();
             grpChucNang = new GroupBox();
-            cbbTheLoai = new ComboBox();
+            cbbLoaiDocGia = new ComboBox();
             txtDiaChi = new TextBox();
             txtSoDienThoai = new TextBox();
             txtEmail = new TextBox();
@@ -168,13 +168,13 @@
             grpChucNang.TabStop = false;
             grpChucNang.Text = "Chức năng";
             // 
-            // cbbTheLoai
+            // cbbLoaiDocGia
             // 
-            cbbTheLoai.FormattingEnabled = true;
-            cbbTheLoai.Location = new Point(272, 247);
-            cbbTheLoai.Name = "cbbTheLoai";
-            cbbTheLoai.Size = new Size(384, 35);
-            cbbTheLoai.TabIndex = 11;
+            cbbLoaiDocGia.FormattingEnabled = true;
+            cbbLoaiDocGia.Location = new Point(272, 247);
+            cbbLoaiDocGia.Name = "cbbLoaiDocGia";
+            cbbLoaiDocGia.Size = new Size(384, 35);
+            cbbLoaiDocGia.TabIndex = 11;
             // 
             // txtDiaChi
             // 
@@ -283,7 +283,7 @@
             grpReaderInfo.BackColor = SystemColors.Control;
             grpReaderInfo.Controls.Add(cbbGioiTinh);
             grpReaderInfo.Controls.Add(dtpNgaySinh);
-            grpReaderInfo.Controls.Add(cbbTheLoai);
+            grpReaderInfo.Controls.Add(cbbLoaiDocGia);
             grpReaderInfo.Controls.Add(txtDiaChi);
             grpReaderInfo.Controls.Add(txtSoDienThoai);
             grpReaderInfo.Controls.Add(txtEmail);
@@ -430,7 +430,7 @@
         private Button btnThem;
         private GroupBox grpDanhSachDocGia;
         private GroupBox grpChucNang;
-        private ComboBox cbbTheLoai;
+        private ComboBox cbbLoaiDocGia;
         private TextBox txtDiaChi;
         private TextBox txtSoDienThoai;
         private TextBox txtEmail;

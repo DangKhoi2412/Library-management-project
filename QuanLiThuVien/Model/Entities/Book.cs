@@ -63,7 +63,7 @@ namespace QuanLiThuVien.Model
         {
             get
             {
-                var tg = Data.DataManager.Instance.TacGiaRepository.GetById(TacGiaId);
+                TacGia tg = Data.DataManager.Instance.TacGiaRepository.GetById(TacGiaId);
                 return tg?.Name ?? "Không rõ";
             }
         }

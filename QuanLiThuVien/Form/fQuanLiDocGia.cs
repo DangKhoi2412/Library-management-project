@@ -115,8 +115,8 @@ namespace QuanLiThuVien
             txtSoDienThoai.ReadOnly = readOnly;
             txtEmail.ReadOnly = readOnly;
             txtDiaChi.ReadOnly = readOnly;
-            cbbTheLoai.Enabled = !readOnly;
             cbbGioiTinh.Enabled = !readOnly;
+            cbbLoaiDocGia.Enabled = !readOnly;
 
             btnThem.Enabled = mode == FormMode.Viewing;
             btnSua.Enabled = mode == FormMode.Viewing && _currentReader != null;
@@ -131,9 +131,9 @@ namespace QuanLiThuVien
             cbbGioiTinh.DisplayMember = "Value";
             cbbGioiTinh.ValueMember = "Key";
 
-            cbbTheLoai.DataSource = Helper.GetEnumList<TypeOfReader>();
-            cbbTheLoai.DisplayMember = "Value";
-            cbbTheLoai.ValueMember = "Key";
+            cbbLoaiDocGia.DataSource = Helper.GetEnumList<TypeOfReader>();
+            cbbLoaiDocGia.DisplayMember = "Value";
+            cbbLoaiDocGia.ValueMember = "Key";
         }
         private void ClearInputs()
         {
@@ -143,8 +143,8 @@ namespace QuanLiThuVien
             txtSoDienThoai.Text = string.Empty;
             txtDiaChi.Text = string.Empty;
             txtEmail.Text = string.Empty;
-            if (cbbTheLoai.Items.Count > 0) cbbTheLoai.SelectedIndex = -1;
             if (cbbGioiTinh.Items.Count > 0) cbbGioiTinh.SelectedIndex = -1;
+            if (cbbLoaiDocGia.Items.Count > 0) cbbLoaiDocGia.SelectedIndex = -1;
         }
 
         private void FillInputs(Reader reader)
@@ -157,10 +157,15 @@ namespace QuanLiThuVien
             txtDiaChi.Text = reader.DiaChi;
             txtEmail.Text = reader.Email;
 
-            bool previousState = cbbTheLoai.Enabled;
-            cbbTheLoai.Enabled = true;
-            cbbTheLoai.SelectedValue = reader.LoaiDocGia;
-            cbbTheLoai.Enabled = previousState;
+            bool previousState = cbbGioiTinh.Enabled;
+            cbbGioiTinh.Enabled = true;
+            cbbGioiTinh.SelectedValue = reader.GioiTinh;
+            cbbGioiTinh.Enabled = previousState;
+
+            bool previousState2 = cbbLoaiDocGia.Enabled;
+            cbbLoaiDocGia.Enabled = true;
+            cbbLoaiDocGia.SelectedValue = reader.LoaiDocGia;
+            cbbLoaiDocGia.Enabled = previousState2;
         }
         private bool TryBuildBookFromInputs(out Reader reader, out string error)
         {
@@ -191,7 +196,7 @@ namespace QuanLiThuVien
             }
 
 
-            if (cbbTheLoai.SelectedValue == null)
+            if (cbbLoaiDocGia.SelectedValue == null)
             {
                 error = "Vui lòng chọn loại độc giả.";
                 return false;
@@ -227,7 +232,7 @@ namespace QuanLiThuVien
 
             try
             {
-                TypeOfReader loaiDocGia = (TypeOfReader)cbbTheLoai.SelectedValue;
+                TypeOfReader loaiDocGia = (TypeOfReader)cbbLoaiDocGia.SelectedValue;
                 GioiTinh gioiTinh = (GioiTinh)cbbGioiTinh.SelectedValue;
 
                 reader = new Reader
